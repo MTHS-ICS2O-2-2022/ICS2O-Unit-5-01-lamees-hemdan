@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2023 Lamees Hemdan All rights reserved
 //
 // Created by: Lamees Hemdan
 // Created on: April 2023
@@ -10,12 +10,14 @@ const randomNumber = Math.floor(Math.random() * 6) + 1
 
 function myButtonClicked () {
   // input
-  const guess = parseInt(document.getElementById("guess").value)
+  const guess = parseInt(document.getElementById("guessed-number").value)
   // process
   if (guess == randomNumber) {
     // output
     document.getElementById('answer').innerHTML = "Correct!"
-  } else {
-    document.getElementById('answer').innerHTML = "Incorrect, the number was " + randomNumber
+  }
+  if (guess != randomNumber) {
+    // output
+    document.getElementById('answer').innerHTML = "Incorrect, try again!" 
   }
 }
